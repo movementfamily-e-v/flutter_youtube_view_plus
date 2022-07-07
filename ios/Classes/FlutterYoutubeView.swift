@@ -134,7 +134,10 @@ class FlutterYoutubeView: NSObject, FlutterPlatformView {
                 VideoEmbedParameter.showRelatedVideo(false),
                 VideoEmbedParameter.showInfo(true),
                 VideoEmbedParameter.autoplay(autoPlay),
-                VideoEmbedParameter.registerStartTimeAt(Int(startSeconds))
+                VideoEmbedParameter.registerStartTimeAt(Int(startSeconds)),
+
+                // TUVIA SERBER
+                VideoEmbedParameter.showModestbranding(true),
             ]
         } else {
             playerVars = [
@@ -145,7 +148,10 @@ class FlutterYoutubeView: NSObject, FlutterPlatformView {
                 VideoEmbedParameter.showInfo(false),
                 VideoEmbedParameter.showControls(VideoControlAppearance.hidden),
                 VideoEmbedParameter.autoplay(autoPlay),
-                VideoEmbedParameter.registerStartTimeAt(Int(startSeconds))
+                VideoEmbedParameter.registerStartTimeAt(Int(startSeconds)),
+                
+                // TUVIA SERBER
+                VideoEmbedParameter.showModestbranding(true)
             ]
         }
         self.player = YTSwiftyPlayer(playerVars: playerVars)
@@ -166,7 +172,65 @@ class FlutterYoutubeView: NSObject, FlutterPlatformView {
             self.player.fillToSuperview()
         }
         self.player.delegate = self
-        self.player.loadPlayer()
+        
+        
+        // TUVIA SERBER
+        // Load video player
+        let htmlString: String? =
+        """
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <style>
+                html, body { margin: 0; padding: 0; width: 100%; height: 100%; background-color: #000000; }
+            </style>
+        </head>
+        <body>
+            <div id="player"></div>
+            <div id="explain"></div>
+            <script src="https://www.youtube.com/iframe_api" onerror="webkit.messageHandlers.onYouTubeIframeAPIFailedToLoad.postMessage('')"></script>
+            <script>
+                var player;
+                var time;
+                YT.ready(function() {
+                         player = new YT.Player('player', %@);
+                         webkit.messageHandlers.onYouTubeIframeAPIReady.postMessage('');
+                         function updateTime() {
+                             var state = player.getPlayerState();
+                             if (state == YT.PlayerState.PLAYING) {
+                                time = player.getCurrentTime();
+                                webkit.messageHandlers.onUpdateCurrentTime.postMessage(time);
+                             }
+                         }
+                         window.setInterval(updateTime, 500);
+                         });
+                         function onReady(event) {
+                             webkit.messageHandlers.onReady.postMessage('');
+                         }
+            function onStateChange(event) {
+                webkit.messageHandlers.onStateChange.postMessage(event.data);
+            }
+            function onPlaybackQualityChange(event) {
+                webkit.messageHandlers.onPlaybackQualityChange.postMessage(event.data);
+            }
+            function onPlaybackRateChange(event) {
+                webkit.messageHandlers.onPlaybackRateChange.postMessage(event.data);
+            }
+            function onPlayerError(event) {
+                webkit.messageHandlers.onError.postMessage(event.data);
+            }
+            function onApiChange(event) {
+                webkit.messageHandlers.onApiChange.postMessage(event.data);
+            }
+            </script>
+        </body>
+        </html>
+        """
+        
+        self.player.loadPlayerHTML(htmlString!)
+
+        // ORIGINAL
+        //self.player.loadPlayer()
     }
     
     private func changeScaleMode(scaleMode: Int) {
