@@ -1,3 +1,5 @@
+## 2.0.7
+Changed name to Plus fix
 ## 2.0.6
 Changed name to Plus
 ## 2.0.4
