@@ -32,7 +32,7 @@ class FlutterYoutubeViewPlus extends StatefulWidget {
   State<StatefulWidget> createState() => _FlutterYoutubeViewState();
 }
 
-class _FlutterYoutubeViewState extends State<FlutterYoutubeView> {
+class _FlutterYoutubeViewState extends State<FlutterYoutubeViewPlus> {
   late FlutterYoutubeViewController _controller;
 
   @override
