@@ -8,9 +8,9 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 Flutter plugin to view Youtube videos. Fixed Bundle problem and added parameter modestbrand.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'http://www.jabadlaplata.org.ar'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'Tuvia Serber' => 'familia.serber@gmail.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
