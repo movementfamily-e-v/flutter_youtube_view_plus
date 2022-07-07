@@ -36,7 +36,7 @@ class FlutterYoutubeViewPlus(
 
     private var lastLifecycle: Lifecycle.Event = Lifecycle.Event.ON_CREATE
     private var job: Job? = null
-    private val TAG = "FlutterYoutubeView"
+    private val TAG = "FlutterYoutubeViewPlus"
 
     private lateinit var youtubePlayerView: YouTubePlayerViewPlus
     private lateinit var container: FLTPlayerView

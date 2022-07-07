@@ -17,7 +17,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 
-class FlutterYoutubeViewPlugin : FlutterPlugin, ActivityAware, Application.ActivityLifecycleCallbacks {
+class FlutterYoutubeViewPlusPlugin : FlutterPlugin, ActivityAware, Application.ActivityLifecycleCallbacks {
     private var activityBinding: ActivityPluginBinding? = null
     private val lifecycleChannel = MutableStateFlow(Lifecycle.Event.ON_CREATE)
     private var registrarActivityHashCode: Int? = null
@@ -72,7 +72,7 @@ class FlutterYoutubeViewPlugin : FlutterPlugin, ActivityAware, Application.Activ
                 // We stop the registration process as this plugin is foreground only.
                 return;
             }
-            val plugin = FlutterYoutubeViewPlugin()
+            val plugin = FlutterYoutubeViewPlusPlugin()
             // register activity lifecycle requirements
             plugin.registrarActivityHashCode = registrar.activity().hashCode()
             registrar.activity()?.application?.registerActivityLifecycleCallbacks(plugin)
