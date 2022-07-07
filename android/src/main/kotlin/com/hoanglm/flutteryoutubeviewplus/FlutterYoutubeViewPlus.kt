@@ -12,7 +12,7 @@ import androidx.lifecycle.Lifecycle
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerViewPlus
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.ui.DefaultPlayerUiController
 import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.MethodCall
@@ -36,9 +36,9 @@ class FlutterYoutubeViewPlus(
 
     private var lastLifecycle: Lifecycle.Event = Lifecycle.Event.ON_CREATE
     private var job: Job? = null
-    private val TAG = "FlutterYoutubeViewPlus"
+    private val TAG = "FlutterYoutubeView"
 
-    private lateinit var youtubePlayerView: YouTubePlayerViewPlus
+    private lateinit var youtubePlayerView: YouTubePlayerView
     private lateinit var container: FLTPlayerView
     private val view: FrameLayout
     private var youtubePlayer: YouTubePlayer? = null
@@ -61,7 +61,7 @@ class FlutterYoutubeViewPlus(
             setVideoScaleMode(mode = videoMode!!)
         }
         container.apply {
-            youtubePlayerView = YouTubePlayerViewPlus(context)
+            youtubePlayerView = YouTubePlayerView(context)
             val layoutParams = FrameLayout.LayoutParams(
                     FrameLayout.LayoutParams.MATCH_PARENT,
                     FrameLayout.LayoutParams.WRAP_CONTENT

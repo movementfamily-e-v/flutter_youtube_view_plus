@@ -1,3 +1,5 @@
+## 2.0.6
+Changed name to Plus
 ## 2.0.4
 https://github.com/hoanglm4/flutter_youtube_view/issues/73
 ## 2.0.3
