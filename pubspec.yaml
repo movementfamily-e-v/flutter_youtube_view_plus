@@ -1,6 +1,6 @@
 name: flutter_youtube_view_plus
 description: A Flutter plugin to view Youtube videos.
-version: 2.0.4
+version: 2.0.5
 homepage: https://github.com/tuvia/flutter_youtube_view_plus
 
 environment:
