@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
-import '../flutter_youtube_view.dart';
+import '../flutter_youtube_view_plus.dart';
 
 class FlutterYoutubeViewController {
   final MethodChannel _channel;
