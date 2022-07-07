@@ -2,9 +2,9 @@
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
 Pod::Spec.new do |s|
-  s.name             = 'flutter_youtube_view'
+  s.name             = 'flutter_youtube_view_plus'
   s.version          = '1.1.4'
-  s.summary          = 'A new Flutter plugin.'
+  s.summary          = 'Fluter plugin to view Youtube videos.'
   s.description      = <<-DESC
 A new Flutter plugin.
                        DESC
@@ -19,4 +19,3 @@ A new Flutter plugin.
 
   s.ios.deployment_target = '9.0'
 end
-
