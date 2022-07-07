@@ -1,5 +1,5 @@
 name: flutter_youtube_view_plus
-description: A new Flutter plugin.
+description: A Flutter plugin to view Youtube videos.
 version: 2.0.4
 homepage: https://github.com/tuvia/flutter_youtube_view_plus
 
@@ -23,10 +23,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.hoanglm.flutteryoutubeview
-        pluginClass: FlutterYoutubeViewPlugin
+        package: com.hoanglm.flutteryoutubeviewplus
+        pluginClass: FlutterYoutubeViewPlusPlugin
       ios:
-        pluginClass: FlutterYoutubeViewPlugin
+        pluginClass: FlutterYoutubeViewPlusPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

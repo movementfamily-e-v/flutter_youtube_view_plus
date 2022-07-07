@@ -4,9 +4,9 @@
 Pod::Spec.new do |s|
   s.name             = 'flutter_youtube_view_plus'
   s.version          = '1.1.4'
-  s.summary          = 'Fluter plugin to view Youtube videos.'
+  s.summary          = 'Flutter plugin to view Youtube videos with a plus.'
   s.description      = <<-DESC
-A new Flutter plugin.
+Flutter plugin to view Youtube videos. Fixed Bundle problem and added parameter modestbrand.
                        DESC
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }

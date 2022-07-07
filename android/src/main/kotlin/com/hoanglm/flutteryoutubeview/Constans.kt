@@ -1,4 +1,4 @@
-package com.hoanglm.flutteryoutubeview
+package com.hoanglm.flutteryoutubeviewplus
 
 class Constans {
     companion object {

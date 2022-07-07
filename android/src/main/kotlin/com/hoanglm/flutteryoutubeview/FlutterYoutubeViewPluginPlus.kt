@@ -1,4 +1,4 @@
-package com.hoanglm.flutteryoutubeview
+package com.hoanglm.flutteryoutubeviewplus
 
 import android.app.Activity
 import android.app.Application

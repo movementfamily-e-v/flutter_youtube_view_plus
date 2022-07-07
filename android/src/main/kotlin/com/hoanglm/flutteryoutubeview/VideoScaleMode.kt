@@ -1,4 +1,4 @@
-package com.hoanglm.flutteryoutubeview
+package com.hoanglm.flutteryoutubeviewplus
 
 enum class VideoScaleMode(val mode: Int) {
     NONE(0),

@@ -1,4 +1,4 @@
-group 'com.hoanglm.flutteryoutubeview'
+group 'com.hoanglm.flutteryoutubeviewplus'
 version '1.0-SNAPSHOT'
 
 buildscript {

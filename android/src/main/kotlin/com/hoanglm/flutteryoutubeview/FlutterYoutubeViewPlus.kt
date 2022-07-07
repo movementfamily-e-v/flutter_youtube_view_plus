@@ -1,4 +1,4 @@
-package com.hoanglm.flutteryoutubeview
+package com.hoanglm.flutteryoutubeviewplus
 
 import android.content.Context
 import android.os.Handler
@@ -12,7 +12,7 @@ import androidx.lifecycle.Lifecycle
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerViewPlus
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.ui.DefaultPlayerUiController
 import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.MethodCall
@@ -24,7 +24,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 
-class FlutterYoutubeView(
+class FlutterYoutubeViewPlus(
         private val context: Context,
         id: Int,
         private val params: HashMap<String, *>,
@@ -38,7 +38,7 @@ class FlutterYoutubeView(
     private var job: Job? = null
     private val TAG = "FlutterYoutubeView"
 
-    private lateinit var youtubePlayerView: YouTubePlayerView
+    private lateinit var youtubePlayerView: YouTubePlayerViewPlus
     private lateinit var container: FLTPlayerView
     private val view: FrameLayout
     private var youtubePlayer: YouTubePlayer? = null
@@ -61,7 +61,7 @@ class FlutterYoutubeView(
             setVideoScaleMode(mode = videoMode!!)
         }
         container.apply {
-            youtubePlayerView = YouTubePlayerView(context)
+            youtubePlayerView = YouTubePlayerViewPlus(context)
             val layoutParams = FrameLayout.LayoutParams(
                     FrameLayout.LayoutParams.MATCH_PARENT,
                     FrameLayout.LayoutParams.WRAP_CONTENT

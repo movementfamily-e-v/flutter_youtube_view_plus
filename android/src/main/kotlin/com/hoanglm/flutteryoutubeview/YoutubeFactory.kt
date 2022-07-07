@@ -1,4 +1,4 @@
-package com.hoanglm.flutteryoutubeview
+package com.hoanglm.flutteryoutubeviewplus
 
 import android.content.Context
 import androidx.lifecycle.Lifecycle
@@ -16,6 +16,6 @@ class YoutubeFactory(
     PlatformViewFactory(StandardMessageCodec.INSTANCE) {
 
     override fun create(context: Context?, viewId: Int, args: Any?): PlatformView {
-        return FlutterYoutubeView(context!!, viewId, args as HashMap<String, *>, binaryMessenger, lifecycleChannel)
+        return FlutterYoutubeViewPlus(context!!, viewId, args as HashMap<String, *>, binaryMessenger, lifecycleChannel)
     }
 }

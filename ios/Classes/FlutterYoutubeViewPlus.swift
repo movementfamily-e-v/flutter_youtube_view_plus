@@ -1,5 +1,5 @@
 //
-//  FlutterYoutubeView.swift
+//  FlutterYoutubeViewPlus.swift
 //  Runner
 //
 //  Created by Le Minh Hoang on 2/27/19.
@@ -16,7 +16,7 @@ enum VideoScaleMode: Int {
     case FIT_WIDTH = 1
     case FIT_HEIGHT = 2
 }
-class FlutterYoutubeView: NSObject, FlutterPlatformView {
+class FlutterYoutubeViewPlus: NSObject, FlutterPlatformView {
     private let frame: CGRect
     private let viewId: Int64
     private let registrar: FlutterPluginRegistrar
@@ -295,11 +295,11 @@ class FlutterYoutubeView: NSObject, FlutterPlatformView {
     
     deinit {
         dispose()
-        print("FlutterYoutubeView is deninit")
+        print("FlutterYoutubeViewPlus is deninit")
     }
 }
 
-extension FlutterYoutubeView: YTSwiftyPlayerDelegate {
+extension FlutterYoutubeViewPlus: YTSwiftyPlayerDelegate {
     func playerReady(_ player: YTSwiftyPlayer) {
         print(#function)
         self.isPlayerReady = true

@@ -21,7 +21,7 @@ class YoutubeFactory: NSObject, FlutterPlatformViewFactory {
     }
     
     func create(withFrame frame: CGRect, viewIdentifier viewId: Int64, arguments args: Any?) -> FlutterPlatformView {
-        return FlutterYoutubeView(_frame: frame,
+        return FlutterYoutubeViewPlus(_frame: frame,
                                   _viewId: viewId,
                                   _params: args as? Dictionary<String, Any> ?? nil,
                                   _registrar: registrar)

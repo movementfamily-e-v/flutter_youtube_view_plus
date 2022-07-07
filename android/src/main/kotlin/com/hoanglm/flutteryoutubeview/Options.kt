@@ -1,4 +1,4 @@
-package com.hoanglm.flutteryoutubeview
+package com.hoanglm.flutteryoutubeviewplus
 
 enum class Options(val value: String) {
     VIDEO_ID("videoId"),

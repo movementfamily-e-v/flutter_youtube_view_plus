@@ -1,4 +1,4 @@
-package com.hoanglm.flutteryoutubeview
+package com.hoanglm.flutteryoutubeviewplus
 
 enum class PlayerError(val value: String) {
     UNKNOWN("UNKNOWN"),
