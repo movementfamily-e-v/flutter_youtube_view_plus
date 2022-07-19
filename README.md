@@ -42,11 +42,11 @@ import 'package:flutter_youtube_view_plus/flutter_youtube_view_plus.dart';
 ```
 Currently apps need to opt-in for the UIViews embedding preview on iOS by adding a boolean property to the Info.plist (key=io.flutter.embedded_views_preview value=YES).
 
-#### 4\. Using Youtube View
+#### 4\. Using Youtube View Plus
 
 ```dart
  Container(
-          child: FlutterYoutubeView(
+          child: FlutterYoutubeViewPlus(
                 onViewCreated: _onYoutubeCreated,
                 listener: this,
                 scaleMode: YoutubeScaleMode.none, // <option> fitWidth, fitHeight
