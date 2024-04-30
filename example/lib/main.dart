@@ -7,13 +7,10 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      routes: <String, WidgetBuilder>{
-        '/custom': (BuildContext context) => new YoutubeCustomWidget(),
-        '/non_custom': (BuildContext context) => new YoutubeDefaultWidget(),
-      },
-      home: HomeScreen()
-    );
+    return MaterialApp(routes: <String, WidgetBuilder>{
+      '/custom': (BuildContext context) => new YoutubeCustomWidget(),
+      '/non_custom': (BuildContext context) => new YoutubeDefaultWidget(),
+    }, home: HomeScreen());
   }
 }
 
@@ -24,13 +21,13 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(title: Text('Youtube player')),
       body: Center(
         child: Column(children: <Widget>[
-          RaisedButton(
+          TextButton(
             onPressed: () {
               Navigator.of(context).pushNamed('/custom');
             },
             child: Text('Open customize player'),
           ),
-          RaisedButton(
+          TextButton(
             onPressed: () {
               Navigator.of(context).pushNamed('/non_custom');
             },
